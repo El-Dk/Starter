@@ -1,0 +1,15 @@
+{
+  "name": "react-express-ts-starter",
+  "private": true,
+  "packageManager": "pnpm@10.20.0",
+  "scripts": {
+    "dev": "pnpm build:shared && pnpm --filter @app/api db:generate && concurrently -k \"pnpm --filter @app/api dev\" \"pnpm --filter @app/web dev\"",
+    "build:shared": "pnpm --filter @app/shared build",
+    "build": "pnpm build:shared && pnpm --filter @app/api db:generate && pnpm -r --if-present build",
+    "typecheck": "pnpm build:shared && pnpm --filter @app/api db:generate && pnpm -r --if-present typecheck"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "typescript": "^5.9.3"
+  }
+}

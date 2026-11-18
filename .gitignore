@@ -1,0 +1,65 @@
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+out/
+coverage/
+
+# Vite
+*.local
+.vite/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+!.env.development.example
+!.env.production.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+
+# Prisma
+# No ignorar prisma/schema.prisma ni las migraciones
+# prisma/migrations/ debe versionarse
+
+# Runtime
+*.pid
+*.seed
+
+# IDEs and editors
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+
+# Operating systems
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+tmp/
+temp/
+.cache/
+
+# Test artifacts
+playwright-report/
+test-results/
+
+# Local databases
+*.sqlite
+*.sqlite-journal
+*.db
